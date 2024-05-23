@@ -8,16 +8,18 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <main>
+    <div style={{ height: "100vh", display: "flex", flexDirection: "column" }}>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/chat" element={<Chat />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </main>
+      <main style={{ flex: 1, overflow: "hidden" }}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/chat" element={<Chat />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+    </div>
   );
 }
 
